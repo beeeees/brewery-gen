@@ -11,16 +11,19 @@ app.get('/api', function(req, res){
     if (!error && response.statusCode == 200) {
       var brewresponse = JSON.parse(body);
       var brewresponse = brewresponse.data;
-      request(url, function (error, response, body) {
-        for (i in brewresponse) {
-          var names = brewresponse[i].brewery.name;
-          console.log(names)
-        }
-      })
+      var datas = [];
+      var names = [];
+      for (i in brewresponse) {
+        datas.push(brewresponse[i]);
+      }
+      for (i in datas) {
+        names.push(datas[i].brewery.name);
+      }
+      res.send(names);
+      res.render("index")
     }
   })
 });
-
 
 
 // // Get for brewery page, and lists all beers if avialable
