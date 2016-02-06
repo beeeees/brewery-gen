@@ -1,20 +1,37 @@
+
 {
-  "name": "grunt-boilerplate",
+  "name": "brewery_app",
   "version": "1.0.0",
-  "description": "Grunt Boilerplate with Sass",
-  "repository": "https://github.com/digital-telepathy/grunt-boilerplate.git",
-  "main": "Gruntfile.js",
-  "dependencies": {
-    "grunt": "~0.4.5",
-    "express": "^4.12.2"
+  "description": "brewery_app ===========",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-browser-sync": "^2.0.0",
-    "grunt-contrib-coffee": "^0.12.0",
-    "grunt-contrib-concat": "^0.5.0",
-    "grunt-contrib-sass": "^0.7.3",
-    "grunt-contrib-uglify": "^0.6.0",
-    "grunt-contrib-watch": "^0.6.1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/"
+  },
+  "author": "Bethany",
+  "license": "ISC",
+  "bugs": {
+    "url": "#"
+  },
+  "homepage": "https://github.com/",
+  "dependencies": {
+    "bcrypt": "^0.8.0",
+    "body-parser": "^1.10.0",
+    "brewerydb-node": "0.0.1",
+    "connect-flash": "^0.1.1",
+    "ejs": "^1.0.0",
+    "express": "^4.10.5",
+    "express-session": "^1.9.3",
+    "geocoder": "^0.2.2",
+    "grunt": "~0.4.5",
+    "install": "^0.4.2",
+    "pg": "^4.1.1",
+    "npm": "^3.6.0",
+    "request": "^2.51.0",
+    "sequelize": "^2.0.0-rc3",
+    "sequelize-cli": "^0.3.3"
   }
 }
