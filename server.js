@@ -9,18 +9,18 @@ var url = "http://api.brewerydb.com/v2/locations?key=" + API_KEY + "&locality=sa
 app.get('/api', function(req, res){
   request(url, function (error, response, body) {
     if (!error && response.statusCode == 200) {
-      var brewresponse = JSON.parse(body);
-      var brewresponse = brewresponse.data;
-      var datas = [];
-      var names = [];
-      for (i in brewresponse) {
-        datas.push(brewresponse[i]);
+      var brewRes = JSON.parse(body);
+      var brewRes = brewRes.data;
+      var dataArr = [];
+      var nameArr = [];
+      for (i in brewRes) {
+        dataArr.push(brewRes[i]);
       }
-      for (i in datas) {
-        names.push(datas[i].brewery.name);
+      for (i in dataArr) {
+        nameArr.push(dataArr[i].brewery.name);
       }
-      res.send(names);
-      res.render("index")
+      // res.send(nameArr);
+      res.render("index", {nameArr:nameArr})
     }
   })
 });
