@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <title>Random San Diego Brewery Generator</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- <link rel="icon" type="image/x-icon" href="img/favicon.ico" /> -->
+    <!-- <link rel="icon" type="image/png" href="img/favicon.png" /> -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+
+  <% var rand = nameArr[Math.floor(Math.random() * nameArr.length)]; %>
+
+  <script>
+    var nameArr2 = "<%- nameArr %>";
+    var nameArr2 = nameArr2.split(',');
+
+    newRandom = function(){
+     var rand2 = nameArr2[Math.floor(Math.random() * nameArr2.length)];
+      $('.h2').text(rand2);
+    }
+  </script>
+
+  <body>
+
+    <div class="main" id="main">
+
+      <h1>What Brewery should I try in San Diego?</h1>
+
+      <h2 class="h2"><%= rand %></h2>
+
+      <button class="btn" onClick= "<%- "newRandom()" %>">I've been there!</button>
+
+    </div> <!-- .main -->
+
+    <script src="./js/all.js"></script>
+  </body>
+</html>

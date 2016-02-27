@@ -24,11 +24,6 @@ You may modify the project name, version, and description in the `package.json` 
 
 At the top of the Gruntfile, there are two options. One refers to the [Sass Output Style](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style) and the other refers to Uglification of the concatenated JavaScript.
 
-### Uglify
-In addition to directly running the uglify task as described below, you can configure the Gruntfile to run the uglify task after the JavaScript has been concatenated into one file.
-```
-var uglifyWhenWatching = true;
-```
 
 ### Sass Output Style
 There is a convenience variable to set the [Sass Output Style](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style) in the configuration block at the top of the Gruntfile.
@@ -36,14 +31,9 @@ There is a convenience variable to set the [Sass Output Style](http://sass-lang.
 var sassOutputStyle = 'expanded';
 ```
 
-## Running Grunt Or The Server
-There are three basic commands that will start grunt. You may want to use the connect server if you have static HTML only. If you have some PHP in your project (header partials, etc.) then you can just use the grunt command without the server. The `dev` command is just an alias for `serve`.
+## Running Node Or The Server
 
-* Running `grunt` will concatenate your scripts, compile your Sass, and watch for changes.
-
-* Running `grunt serve` or `grunt dev` will concatenate your scripts, compile your Sass, **start a server on port 8000 [http://localhost:8000/](http://localhost:8000/)**, and watch for changes.
-
-* Running `grunt uglify` will take your concatenated JavaScript and compress it as a new file with the `.min.js` extension, then exit.
+* Running `node server` will **start a server on port 3000 [http://localhost:3000/](http://localhost:3000/)**
 
 ## Deploying to Heroku
 
